@@ -1,0 +1,428 @@
+/*Corpo do meu site*/
+body{
+    background-color: #D1E0E3;
+    margin: 0;
+}
+
+/*cabeçalho*/
+header{
+    height: 80px;
+    background-color: #57547E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-header a{
+    text-decoration: none;
+    color: white;
+}
+
+/*div dos botoes*/
+.button-header{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 100%;
+}
+
+/*class dos botoes*/
+.btn{
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-size: 15px
+}
+
+/*hover que eu uso para dar interacao pro meu site*/
+.btn:hover{
+    background-color: #706e8f;
+    transition: 0.3ms;
+    border-radius: 5px;
+}
+
+
+/* secao hero, com a imagem de portfolio*/
+.hero-section img{
+    width: 100%;
+    height: auto;
+}
+
+.about-divider{
+     border: 0;
+    border-top: 1px solid #706e8f;
+    width: 80%;
+    margin: 0 auto 30px auto;
+}
+
+
+
+
+
+/*div principal Sobre*/
+.about-section{
+    margin: 90px auto;
+    padding: 0 40px;
+    gap: 60px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 1300px;
+}
+
+
+
+/*Div do bloco de texto*/
+.about-text-section{
+    max-width: 600px;
+}
+
+
+/*Titulo da minha pagina*/
+h1{
+    font-family: 'Alice', serif;
+    font-weight: 400;
+    font-size: 48px;
+    text-align: center;
+    margin-top: 0px;
+    color: #57547E;
+    font-size: 60px;
+}
+
+
+/*Paragráfo*/
+p{
+    font-family: 'Inter', serif;
+    font-weight: 500;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #333;
+    text-indent: 50px; 
+    text-align: justify;
+}
+
+
+/*Div da imagem da secao Sobre*/
+.about-section img{
+    height: auto;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 60px;
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
+/*Div principal Projetos*/
+.project-section{
+    text-align: center;
+    margin-top: 100px ;
+    margin-bottom: 150px;
+}
+
+
+.project-img-section{
+    display: flex;         /* Ativa o modo lado a lado */
+    justify-content: center; /* Centraliza o grupo de projetos na tela */
+    flex-wrap: wrap;       /* Se a tela diminuir, eles pulam linha bonitinho */
+    gap: 40px;             /* Cria o espaçamento perfeito entre cada card */
+}
+
+/*Div apenas organizar a aparencia das imagens de Projetos */
+.project-img-section img{
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: cover;
+    padding: 20px; 
+    border-radius: 100px;
+}
+
+/*Div para organizar texto e imagem de Projetos*/
+.project-card{
+    display: flex;
+    flex-direction: column; /* Coloca o link exatamente embaixo da imagem */
+    align-items: center;    /* Centraliza o link em relação à imagem */
+    gap: 15px;
+}
+
+.project-card a{
+    font-family: 'Inter', sans-serif;
+    color: #57547E;          /* A cor roxinha elegante que você está usando */
+    text-decoration: none;   /* Tira aquele sublinhado padrão dos links */
+    font-weight: 500;
+    font-size: 20px;
+    transition: color 0.3s, text-decoration 0.3s; /* Deixa a mudança suave ao passar o mouse */
+}
+    
+
+
+.h1-project{
+    font-family: 'Homemade Apple', serif;
+    font-weight: 400;
+    font-size: 60px;
+    text-align: center;
+    margin-top: 0px;
+    color: #57547E;
+    font-size: 60px;
+}
+
+
+
+.footer-section{
+    height: auto;
+    background-color: #57547E;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.footer-title{
+    font-family: 'inter', serif;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.footer-link-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Importante para o celular quebrar linha se não couber */
+    gap: 20px;
+    margin-bottom: 50px;
+}
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #768b82;
+    padding: 15px 25px;
+    border-radius: 10px;
+    text-decoration: none; /* Remove aquele sublinhado do link */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Sombra bem levinha */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+/*Estilizando as imagens do meu Footer*/
+.footer-link-section img{
+    height: 45px;
+    width: 45px;
+    object-fit: contain; 
+
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #FFFFFF;
+    padding: 15px 25px;
+    border-radius: 10px;
+    text-decoration: none; /* Remove aquele sublinhado do link */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Sombra bem levinha */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-card span {
+    font-family: 'Inter', sans-serif;
+    color: #615f5f;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+
+
+/* Estilizando o link no estado normal */
+.contact-footer-link a {
+    font-family: 'Inter', sans-serif;
+    color: #57547E;          /* A cor roxinha elegante que você está usando */
+    text-decoration: none;   /* Tira aquele sublinhado padrão dos links */
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s, text-decoration 0.3s; /* Deixa a mudança suave ao passar o mouse */
+}
+
+
+.footer-divider {
+    border: 0;
+    border-top: 1px solid #D1CFE2;
+    width: 80%;
+    margin: 0 auto 30px auto;
+}
+
+
+/*Aquele @no final*/
+.copyright{
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+}
+
+
+
+
+/*About
+Segue as mesmas regras de:
+-header
+-footer
+-h1
+-p
+
+
+
+
+*/
+
+
+/* COLUNA 01 */
+.coluna-01{
+    display: flex;
+    margin: 50px;
+    gap: 100px;
+}
+
+.coluna-01 img{
+    border-radius: 60px;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.coluna-01-texto{
+    display: block;
+}
+
+.about-h1{
+    font-family: 'Alice', serif;
+    font-weight: 400;
+    font-size: 48px;
+
+    margin-top: 0px;
+    color: #57547E;
+    font-size: 60px;
+}
+
+
+/*COLUNA 02*/
+.coluna-02{
+    margin-top: 50px;
+}
+
+.h2-about{
+    font-family: 'Homemade Apple', serif;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    color: #57547E;
+    font-size: 60px;
+}
+
+.coluna-02-texto{
+    display: block;
+}
+
+
+.hobbie-01{
+    display: flex;
+    gap: 90px;
+}
+
+.hobbie-01 img{
+    height: auto;
+    width: 100%;
+    max-width: 500px;
+}
+
+li{
+    font-style: italic;
+    word-spacing: 1px;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+
+
+
+/* Quando a tela for menor que 1040px (Notebooks menores e Tablets) */
+@media (max-width: 1040px) {
+    .about-section {
+        flex-direction: column-reverse; /* No tablet/celular, joga a foto para cima e o texto para baixo */
+        align-items: center;
+        text-align: center;
+        margin: 40px auto;
+    }
+
+    .about-section img {
+        margin-top: 0; /* Remove o topo grande já que ela mudou de posição */
+        max-width: 350px; /* Deixa a foto em um tamanho lindo para telas menores */
+    }
+
+    p {
+        text-indent: 0; /* Remove o parágrafo empurrado para o texto centralizado ficar mais bonito */
+        text-align: center; /* Centraliza o texto no formato mobile */
+    }
+}
+
+/* Quando a tela for menor que 768px (Celulares) */
+@media (max-width: 768px) {
+    /* Garante que o body não tenha margens escondidas criando barras de rolagem */
+    body {
+        overflow-x: hidden; 
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 38px; 
+    }
+    
+    /* Dá um espaço extra acima do título "Meus Projetos" para desgrudar da seção Sobre */
+    .h1-project {
+        font-size: 38px;
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+
+    /* Resolve o colado das imagens dos projetos e dá espaço entre os cards no celular */
+    .project-section {
+        margin-top: 40px;
+        margin-bottom: 80px; /* Espaço confortável antes de chegar no footer */
+        padding: 0 10px;    /* Protege as bordinhas no celular */
+    }
+
+    .project-img-section {
+        gap: 50px; /* Aumenta o espaço vertical ENTRE um projeto e outro */
+    }
+
+    .project-card {
+        margin-bottom: 20px; /* Garante que o link de um não cole na foto do de baixo */
+    }
+
+    /* CORREÇÃO DO FOOTER: Força ele a ocupar a largura total da tela sem bordinhas */
+    .footer-section {
+        width: 100%;
+        box-sizing: border-box; /* Essencial para o padding não "escorregar" para fora da tela */
+        margin-left: 0;
+        margin-right: 0;
+        padding: 40px 15px; /* Diminui um pouco o padding lateral para telas de 320px */
+    }
+
+    .footer-link-section {
+        flex-direction: column; 
+        width: 100%;
+        gap: 15px; /* Deixa as caixinhas de contato com um espaço perfeito entre elas */
+    }
+
+    .contact-card {
+        width: 90%; /* Aumentei para 90% para ocupar quase a tela toda do celular, fica lindo! */
+        max-width: 280px; /* Mas limita para não ficar um linguição em celulares maiores */
+        justify-content: center;
+    }
+}
