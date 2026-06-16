@@ -274,12 +274,14 @@ Segue as mesmas regras de:
 -footer
 -h1
 -p
-
-
-
-
 */
 
+/*Div principal Sobre*/
+
+.about{
+    margin-top: 80px;
+    
+}
 
 /* COLUNA 01 */
 .coluna-01{
@@ -292,6 +294,7 @@ Segue as mesmas regras de:
     border-radius: 60px;
     height: auto;
     object-fit: cover;
+    width: 800px;
 }
 
 
@@ -333,6 +336,7 @@ Segue as mesmas regras de:
 .hobbie-01{
     display: flex;
     gap: 90px;
+    justify-content:  center;
 }
 
 .hobbie-01 img{
