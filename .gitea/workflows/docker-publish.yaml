@@ -13,12 +13,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Login no Gitea Registry
-        uses: docker/login-action@v4
-        with:
-          registry: gitea.rubensminoru.com
-          username: ${{ gitea.actor }}
-          password: ${{ secrets.PUBLISHING_TOKEN }}
+      - name: Docker login
+        run: |
+          echo "${{ secrets.GITEA_TOKEN }}" | docker login gitea.rubensminoru.com \
+            -u "rubens.bueno" \
+            --password-stdin
 
       - name: Build da imagem
         run: |
