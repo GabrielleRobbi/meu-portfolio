@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: portfolio
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+spec:
+  ingressClassName: traefik-public
+  tls:
+    - secretName: portfolio-tls
+      hosts:
+        - portfolio.bygabriellerobbi.com.br
+  rules:
+    - host: portfolio.bygabriellerobbi.com.br
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: portfolio
+                port:
+                  number: 80
