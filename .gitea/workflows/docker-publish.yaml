@@ -18,7 +18,7 @@ jobs:
         with:
           registry: gitea.rubensminoru.com
           username: ${{ gitea.actor }}
-          password: ${{ secrets.GITEA_TOKEN }}
+          password: ${{ secrets.PUBLISHING_TOKEN }}
 
       - name: Build da imagem
         run: |
