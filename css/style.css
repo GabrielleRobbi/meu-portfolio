@@ -277,7 +277,8 @@ Segue as mesmas regras de:
     border-radius: 60px;
     height: auto;
     object-fit: cover;
-    width: 600px;
+    width: 100%;
+    max-width: 500px;
 }
 
 .coluna-01-texto{
@@ -324,7 +325,7 @@ Segue as mesmas regras de:
 .hobbie-01 img{
     height: auto;
     width: 100%;
-    max-width: 500px;
+    max-width: 450px;
 }
 
 li{
