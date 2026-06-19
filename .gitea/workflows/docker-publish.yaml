@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - "iac/k8s/**"
 
 env:
   DOCKER_IMAGE: gitea.rubensminoru.com/rubens.bueno/portfolio
