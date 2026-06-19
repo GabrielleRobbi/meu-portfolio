@@ -36,7 +36,7 @@ jobs:
 
   update_image:
     runs-on: ubuntu-latest
-    depends: [docker]
+    needs: [docker]
 
     steps:
       - name: Instalar git
