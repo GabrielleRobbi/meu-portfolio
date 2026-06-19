@@ -15,7 +15,7 @@ jobs:
 
       - name: Docker login
         run: |
-          echo "${{ secrets.GITEA_TOKEN }}" | docker login gitea.rubensminoru.com \
+          echo "${{ secrets.PUBLISHING_TOKEN }}" | docker login gitea.rubensminoru.com \
             -u "rubens.bueno" \
             --password-stdin
 
