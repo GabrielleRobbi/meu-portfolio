@@ -48,7 +48,7 @@ jobs:
 
       - name: Checkout
         run: |
-          git clone "https://rubens.bueno:${{ secrets.PUBLISHING_TOKEN }}@gitea.rubensminoru.com/rubens.bueno/portfolio.git" .
+          git clone "https://rubens.bueno:${{ secrets.PUBLISHING_TOKEN }}@gitea.rubensminoru.com/gabrielle.robbi/portfolio.git" .
           git checkout main
 
       - name: Atualizar manifest com nova tag
