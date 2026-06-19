@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  DOCKER_IMAGE: agitea.rubensminoru.com/rubens.bueno/portfoliod
+  DOCKER_IMAGE: gitea.rubensminoru.com/rubens.bueno/portfoliod
 
 jobs:
   docker:
