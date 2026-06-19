@@ -34,6 +34,19 @@ jobs:
           docker push ${{ env.DOCKER_IMAGE }}:latest
           docker push ${{ env.DOCKER_IMAGE }}:${{ gitea.sha }}
 
+  update_image:
+    runs-on: ubuntu-latest
+    depends: [docker]
+
+    steps:
+      - name: Instalar git
+        run: |
+          apt-get update && apt-get install -y --no-install-recommends \
+              ca-certificates \
+              git \
+            && apt-get clean \
+            && rm -rf /var/lib/apt/lists/*
+
       - name: Atualizar manifest com nova tag
         run: |
           sed -i "s|image: ${{ env.DOCKER_IMAGE }}:.*|image: ${{ env.DOCKER_IMAGE }}:${{ gitea.sha }}|" iac/k8s/deployment.yaml
