@@ -4,12 +4,10 @@ metadata:
   name: portfolio
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt
+    traefik.ingress.kubernetes.io/router.entrypoints: websecure
+    traefik.ingress.kubernetes.io/router.tls: "true"
 spec:
   ingressClassName: traefik-public
-  tls:
-    - secretName: portfolio-tls
-      hosts:
-        - portfolio.bygabriellerobbi.com.br
   rules:
     - host: portfolio.bygabriellerobbi.com.br
       http:
@@ -21,3 +19,7 @@ spec:
                 name: portfolio
                 port:
                   number: 80
+  tls:
+    - secretName: portfolio-tls
+      hosts:
+        - portfolio.bygabriellerobbi.com.br
