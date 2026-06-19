@@ -112,12 +112,6 @@ p{
     margin-top: 50px;
 }
 
-
-
-
-
-
-
 /*Div principal Projetos*/
 .project-section{
     text-align: center;
@@ -160,8 +154,6 @@ p{
     transition: color 0.3s, text-decoration 0.3s; /* Deixa a mudança suave ao passar o mouse */
 }
     
-
-
 .h1-project{
     font-family: 'Homemade Apple', serif;
     font-weight: 400;
@@ -171,8 +163,6 @@ p{
     color: #57547E;
     font-size: 60px;
 }
-
-
 
 .footer-section{
     height: auto;
@@ -236,8 +226,6 @@ p{
     font-size: 16px;
 }
 
-
-
 /* Estilizando o link no estado normal */
 .contact-footer-link a {
     font-family: 'Inter', sans-serif;
@@ -248,14 +236,12 @@ p{
     transition: color 0.3s, text-decoration 0.3s; /* Deixa a mudança suave ao passar o mouse */
 }
 
-
 .footer-divider {
     border: 0;
     border-top: 1px solid #D1CFE2;
     width: 80%;
     margin: 0 auto 30px auto;
 }
-
 
 /*Aquele @no final*/
 .copyright{
@@ -265,9 +251,6 @@ p{
     text-align: center;
 }
 
-
-
-
 /*About
 Segue as mesmas regras de:
 -header
@@ -276,8 +259,8 @@ Segue as mesmas regras de:
 -p
 */
 
-/*Div principal Sobre*/
 
+/*Div principal Sobre*/
 .about{
     margin-top: 80px;
     
@@ -294,9 +277,8 @@ Segue as mesmas regras de:
     border-radius: 60px;
     height: auto;
     object-fit: cover;
-    width: 800px;
+    width: 600px;
 }
-
 
 .coluna-01-texto{
     display: block;
@@ -352,8 +334,12 @@ li{
     margin-bottom: 5px;
 }
 
-
-
+@media (min-width: 1440px) {
+    .hobbie-01 img {
+        max-width: 500px !important;
+        object-fit: contain;
+    }
+}
 
 /* Quando a tela for menor que 1040px (Notebooks menores e Tablets) */
 @media (max-width: 1040px) {
@@ -373,14 +359,74 @@ li{
         text-indent: 0; /* Remove o parágrafo empurrado para o texto centralizado ficar mais bonito */
         text-align: center; /* Centraliza o texto no formato mobile */
     }
+
+    /* ADAPTAÇÃO APENAS PARA A PÁGINA SOBRE NO TABLET */
+    .coluna-01 {
+        flex-direction: column; /* Empilha a foto e o texto */
+        gap: 30px;
+        margin: 30px auto;
+        max-width: 90%;
+    }
+
+    .coluna-01 img {
+        width: 100%;
+        max-width: 450px; /* Controla o tamanho da foto para não quebrar o layout */
+        margin: 0 auto;
+    }
+
+    .about-h1, .h2-about {
+        font-size: 44px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .hobbie-01 {
+        flex-direction: column-reverse; /* Empilha as listas e a imagem dos hobbies */
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .coluna-02-texto {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .coluna-02-texto ul {
+        display: inline-block;
+        text-align: left;
+        padding-left: 20px;
+        margin: 0 auto 20px auto;
+    }
+
+    .hobbie-01 img {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto; /* CORREÇÃO 1024px: Centraliza a imagem dos hobbies */
+    }
 }
+
+
 
 /* Quando a tela for menor que 768px (Celulares) */
 @media (max-width: 768px) {
     /* Garante que o body não tenha margens escondidas criando barras de rolagem */
-    body {
+    html, body {
         overflow-x: hidden; 
         width: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    header {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 10px;
     }
 
     h1 {
@@ -420,13 +466,51 @@ li{
 
     .footer-link-section {
         flex-direction: column; 
+        align-items: center;
         width: 100%;
         gap: 15px; /* Deixa as caixinhas de contato com um espaço perfeito entre elas */
     }
 
     .contact-card {
-        width: 90%; /* Aumentei para 90% para ocupar quase a tela toda do celular, fica lindo! */
-        max-width: 280px; /* Mas limita para não ficar um linguição em celulares maiores */
+        width: 85%; /* Aumentei para 90% para ocupar quase a tela toda do celular, fica lindo! */
+        max-width: 260px; /* Mas limita para não ficar um linguição em celulares maiores */
         justify-content: center;
+        box-sizing: border-box;
+    }
+
+    /* ADAPTAÇÃO APENAS PARA A PÁGINA SOBRE NO CELULAR */
+    .coluna-01 {
+        margin: 20px auto;
+        gap: 20px;
+        padding: 0 15px;
+        max-width: 100%;
+    }
+
+    .about-h1, .h2-about {
+        font-size: 34px;
+    }
+
+    .coluna-01 img, .hobbie-01 img {
+        max-width: 90%;
+        border-radius: 30px; /* Arredondamento mais sutil em telas pequenas */
+    }
+
+    ul {
+        padding-left: 20px; /* Alinha os pontinhos da lista para não sumirem na borda */
+    }
+    
+    li {
+        font-size: 18px;
+    }
+
+    /* ADAPTAÇÃO DE SEGURANÇA PARA A PÁGINA "INDEX" EM 320px */
+    .hero-section img {
+        width: 100%;
+        height: auto;
+    }
+    .about-text-section {
+        max-width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
     }
 }
