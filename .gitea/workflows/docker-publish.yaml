@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  DOCKER_IMAGE: gitea.rubensminoru.com/rubens.bueno/portfoliod
+  DOCKER_IMAGE: gitea.rubensminoru.com/rubens.bueno/portfolio
 
 jobs:
   docker:
@@ -51,6 +51,8 @@ jobs:
 
       - name: Atualizar manifest com nova tag
         run: |
+          cd "$GITHUB_WORKSPACE"
+          
           sed -i "s|image: ${{ env.DOCKER_IMAGE }}:.*|image: ${{ env.DOCKER_IMAGE }}:${{ gitea.sha }}|" iac/k8s/deployment.yaml
 
           git config user.name "gitea-actions"
