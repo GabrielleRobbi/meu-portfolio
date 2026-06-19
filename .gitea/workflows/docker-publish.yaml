@@ -25,18 +25,18 @@ jobs:
       - name: Build da imagem
         run: |
           docker build \
-            -t {{ env.DOCKER_IMAGE }}:latest \
-            -t {{ env.DOCKER_IMAGE }}:${{ gitea.sha }} \
+            -t ${{ env.DOCKER_IMAGE }}:latest \
+            -t ${{ env.DOCKER_IMAGE }}:${{ gitea.sha }} \
             .
 
       - name: Push da imagem
         run: |
-          docker push {{ env.DOCKER_IMAGE }}:latest
-          docker push {{ env.DOCKER_IMAGE }}:${{ gitea.sha }}
+          docker push ${{ env.DOCKER_IMAGE }}:latest
+          docker push ${{ env.DOCKER_IMAGE }}:${{ gitea.sha }}
 
       - name: Atualizar manifest com nova tag
         run: |
-          sed -i "s|image: {{ env.DOCKER_IMAGE }}:.*|image: {{ env.DOCKER_IMAGE }}:${{ gitea.sha }}|" iac/k8s/deployment.yaml
+          sed -i "s|image: ${{ env.DOCKER_IMAGE }}:.*|image: ${{ env.DOCKER_IMAGE }}:${{ gitea.sha }}|" iac/k8s/deployment.yaml
 
           git config user.name "gitea-actions"
           git config user.email "gitea-actions@gitea.local"
